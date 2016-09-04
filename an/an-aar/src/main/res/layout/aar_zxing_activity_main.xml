@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:gravity="top"
+        android:hint="请输入扫描的次数;默认为扫描1次"
+        android:inputType="number"
+        android:maxLines="1"
+        android:paddingRight="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:text="扫描二维码" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:gravity="center_horizontal"
+        android:lines="3"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/qrcode_bitmap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/result" />
+
+    <View
+        android:id="@+id/lineview"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/qrcode_bitmap"
+        android:background="@color/colorAccent" />
+
+    <EditText
+        android:id="@+id/et_qr_string"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lineview"
+        android:layout_marginTop="30dp"
+        android:hint="Input the text to create qrcode" />
+
+    <Button
+        android:id="@+id/btn_add_qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_qr_string"
+        android:text="创建二维码" />
+
+    <TextView
+        android:id="@+id/tv_scan_result"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_add_qrcode"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/iv_qr_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_scan_result"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_qr_image"
+        android:text="扫描默认" />
+
+</RelativeLayout>
