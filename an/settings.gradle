@@ -1,1 +1,1 @@
-include ':app', ':an-aar'
+include ':app', ':an-aar', ':an-zxing'
